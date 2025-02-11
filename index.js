@@ -73,16 +73,6 @@ const createFiles = (basePath, structure) => {
   });
 };
 
-const createFolder = (basePath, folderName) => {
-  const folderPath = path.join(basePath, folderName);
-  try {
-    fs.mkdir(folderPath, { recursive: true });
-    console.log("Folder created successfully");
-  } catch (error) {
-    console.error("Error creating folder:", error);
-  }
-};
-
 (async () => {
   console.log(chalk.blue("Welcome to Create Express Server!"));
 
@@ -110,10 +100,6 @@ const createFolder = (basePath, folderName) => {
     console.log(chalk.red("Error: Directory already exists."));
     process.exit(1);
   }
-
-  createFolder("/src", "controller");
-  createFolder("/src", "model");
-  createFolder("/src", "routes");
 
   const template = response.language === "ts" ? tsTemplate : jsTemplate;
   fs.mkdirSync(projectDir, { recursive: true });
