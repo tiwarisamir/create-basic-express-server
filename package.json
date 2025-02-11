@@ -1,24 +1,32 @@
 {
   "name": "create-basic-express-server",
-  "version": "0.0.1",
-  "description": "CLI tool to scaffold an Express server project",
-  "main": "index.js",
-  "type": "module",
+  "description": "A CLI tool to create a basic Express.js server structure",
+  "version": "0.0.5",
   "bin": {
-    "create-basic-express-server": "index.js"
+    "create-basic-express-server": "./dist/index.js"
   },
-  "keywords": [
-    "express",
-    "server",
-    "create",
-    "typescript",
-    "javascript",
-    "node"
-  ],
-  "author": "Samir Tiwari",
-  "license": "MIT",
+  "exports": {
+    "./createFiles": "./dist/createFiles.js",
+    "./prompts": "./dist/prompts.js"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
   "dependencies": {
-    "chalk": "^5.4.1",
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.1.0",
     "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/prompts": "^2.4.9",
+    "rollup": "^3.27.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.1.6"
   }
 }
