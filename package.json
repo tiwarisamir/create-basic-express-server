@@ -1,32 +1,36 @@
 {
   "name": "create-basic-express-server",
-  "description": "A CLI tool to create a basic Express.js server structure",
-  "version": "0.0.5",
+  "version": "1.0.3",
+  "description": "A CLI tool to scaffold a basic Express server project with folder structure",
+  "main": "dist/index.js",
   "bin": {
-    "create-basic-express-server": "./dist/index.js"
+    "basic-express-server": "dist/index.mjs"
   },
-  "exports": {
-    "./createFiles": "./dist/createFiles.js",
-    "./prompts": "./dist/prompts.js"
-  },
+  "type": "module",
   "scripts": {
-    "build": "rollup -c"
+    "build": "tsc && rollup -c",
+    "start": "node dist/index.mjs"
   },
+  "keywords": [
+    "express",
+    "scaffold",
+    "cli",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Samir Tiwari",
+  "license": "MIT",
   "dependencies": {
-    "chalk": "^5.3.0",
-    "fs-extra": "^11.1.0",
-    "prompts": "^2.4.2"
+    "inquirer": "^9.0.0",
+    "latest-version": "^9.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-node-resolve": "^15.3.1",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.0.0",
-    "@types/fs-extra": "^11.0.4",
-    "@types/prompts": "^2.4.9",
-    "rollup": "^3.27.0",
-    "ts-node": "^10.9.1",
-    "tslib": "^2.8.1",
-    "typescript": "^5.1.6"
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^18.0.0",
+    "rollup": "^4.34.6",
+    "typescript": "^4.9.5"
   }
 }
