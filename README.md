@@ -6,7 +6,7 @@ _A CLI tool to generate a basic Express.js project with TypeScript or JavaScript
 
 ## 🚀 Installation
 
-You can run this tool using `npm create` (no installation required):
+You can run this tool using
 
 ```sh
 npm create basic-express-server my-app
@@ -44,18 +44,58 @@ my-app
 
 ## 🔧 Usage
 
-Run the following command to generate a new Express.js project:
+Run the following command to generate a new project:
 
 ```sh
 npm create basic-express-server my-app
 ```
 
-During setup, you'll be prompted to choose:
+### 🏃‍♂️ Running the Project
 
-- **JavaScript or TypeScript**
-- **Project name**
+### For JavaScript:
 
----
+```sh
+cd my-app
+npm install
+```
+
+**In Development**
+
+```
+npm run dev
+```
+
+**In Production**
+
+```
+npm run start
+```
+
+### For TypeScript:
+
+```sh
+cd my-app
+npm install
+
+```
+
+**For Development**
+Run in two Terminal
+
+```
+npm run watch
+```
+
+```
+npm run dev
+```
+
+**For Production**
+
+```
+npm run build
+npm run start
+```
 
 ## 📜 Features
 

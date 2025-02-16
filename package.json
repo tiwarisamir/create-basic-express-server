@@ -1,10 +1,11 @@
 {
   "name": "create-basic-express-server",
   "version": "1.0.3",
-  "description": "A CLI tool to scaffold a basic Express server project with folder structure",
+  "description": "A CLI tool to create basic Express server project with folder structure",
   "main": "dist/index.js",
   "bin": {
-    "basic-express-server": "dist/index.mjs"
+    "basic-express-server": "dist/index.mjs",
+    "create-basic-express-server": "dist/index.mjs"
   },
   "type": "module",
   "scripts": {
@@ -12,9 +13,8 @@
     "start": "node dist/index.mjs"
   },
   "keywords": [
+    "nodejs",
     "express",
-    "scaffold",
-    "cli",
     "typescript",
     "javascript"
   ],
