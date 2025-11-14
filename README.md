@@ -9,14 +9,14 @@ _A CLI tool to generate a basic Express.js project with TypeScript or JavaScript
 You can run this tool using
 
 ```sh
-npm create basic-express-server my-app
+npm create basic-express-server myApp
 ```
 
 Or install it globally:
 
 ```sh
 npm install -g create-basic-express-server
-create-basic-express-server my-app
+create-basic-express-server myApp
 ```
 
 ---
@@ -52,13 +52,6 @@ npm create basic-express-server my-app
 
 ### 🏃‍♂️ Running the Project
 
-### For JavaScript:
-
-```sh
-cd my-app
-npm install
-```
-
 **In Development**
 
 ```
@@ -69,25 +62,6 @@ npm run dev
 
 ```
 npm run start
-```
-
-### For TypeScript:
-
-```sh
-cd my-app
-npm install
-
-```
-
-**For Development**
-Run in two Terminal
-
-```
-npm run watch
-```
-
-```
-npm run dev
 ```
 
 **For Production**
