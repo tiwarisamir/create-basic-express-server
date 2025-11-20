@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import inquirer from "inquirer";
 import { execSync } from "child_process";
+import { input, select } from "@inquirer/prompts";
 
 function detectPackageManager(): "npm" | "yarn" | "pnpm" {
   const userAgent = process.env.npm_config_user_agent;
@@ -54,14 +55,13 @@ function installPackages(
 async function initProject() {
   const commandLineProjectName = process.argv[2];
 
+  let projectName = commandLineProjectName;
   const packageManager = detectPackageManager();
 
   const questions: any[] = [];
 
   if (!commandLineProjectName) {
-    questions.push({
-      type: "input",
-      name: "projectName",
+    projectName = await input({
       message: "Enter your project name:",
       validate: (input: string) => {
         if (!input) return "Project name cannot be empty";
@@ -80,17 +80,11 @@ async function initProject() {
     }
   }
 
-  questions.push({
-    type: "list",
-    name: "language",
+  const language = await select({
     message: "Choose server language:",
     choices: ["JavaScript", "TypeScript"],
   });
 
-  const answers = await inquirer.prompt(questions);
-
-  const projectName = commandLineProjectName || answers.projectName;
-  const { language } = answers;
   const projectDir = path.join(process.cwd(), projectName);
 
   // Create project main folder

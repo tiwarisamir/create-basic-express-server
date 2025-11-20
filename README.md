@@ -64,19 +64,12 @@ npm run dev
 npm run start
 ```
 
-**For Production**
-
-```
-npm run build
-npm run start
-```
-
 ## 📜 Features
 
 ✅ Generate an Express.js project in seconds  
 ✅ Supports both **JavaScript** and **TypeScript**  
 ✅ Pre-configured folder structure  
-✅ Adds essential dependencies (`express`, `dotenv`, etc.)  
+✅ Adds essential dependencies (`express`, `dotenv`,`cors`, etc.)  
 ✅ Automatically sets the latest package versions in `package.json`
 
 ---
